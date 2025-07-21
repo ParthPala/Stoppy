@@ -57,4 +57,31 @@ https://user-images.githubusercontent.com/yourvideoID/sample-demo.mp4
 ---
 
 ## 📁 Folder Structure
+com.doublep.stoppy
+├── data/ # PrefsHelper, ThemePack, ButtonStyleItem
+├── home/
+│ ├── view/ # HomeActivity, layouts
+│ ├── viewmodel/ # HomeViewModel
+│ └── others/ # LapAdapter
+└── drawable/ # Button backgrounds, icons
 
+yaml
+Copy
+Edit
+
+---
+
+## 🛠️ Setup Instructions
+
+1. Clone this repository
+2. Open in Android Studio
+3. Run on emulator or device (min SDK 24)
+
+---
+
+## 👤 Author
+
+Parth Pala  
+📧 palaparth28@gmail.com
+
+---

@@ -64,11 +64,6 @@ com.doublep.stoppy
 │ ├── viewmodel/ # HomeViewModel
 │ └── others/ # LapAdapter
 └── drawable/ # Button backgrounds, icons
-
-yaml
-Copy
-Edit
-
 ---
 
 ## 🛠️ Setup Instructions

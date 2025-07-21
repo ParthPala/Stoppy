@@ -15,31 +15,30 @@
 - Floating Action Button (FAB) menu for quick settings
 - Save and restore laps across sessions
 - Responsive layout tested on multiple device sizes
+---
+## 📱 App Screenshots
+
+| Splash | Home | Settings |
+|--------|------|----------|
+| ![Splash](screenshots/splash.png) | ![Home](screenshots/home.png) | ![Settings](screenshots/fab_button.png) |
+
+| Timer Started | Lap List | Background Color Picker |
+|---------------|----------|--------------------------|
+| ![Timer](screenshots/timer_start.png) | ![Lap List](screenshots/lap_list.png) | ![Background Color](screenshots/font_color_option.png) |
+
+| Theme Picker | Font Style Picker | Button Style Picker |
+|-------------------|-------------------|----------------------|
+| ![Font Color](screenshots/theme_options.png) | ![Font Style](screenshots/font_options.png) | ![Button Style](screenshots/button_style_options.png) |
 
 ---
-
-## 🖼️ Screenshots
-
-| Home Screen | Theme Selection | Button Styles | Lap View |
-|-------------|------------------|----------------|----------|
-| ![Home](screenshots/screen_home.jpg) | ![Themes](screenshots/screen_theme.jpg) | ![Buttons](screenshots/screen_buttons.jpg) | ![Laps](screenshots/screen_laps.jpg) |
-
-> _You can place your screenshots in a `/screenshots` folder_
-
----
-
 ## 📹 Demo Video
-https://streamable.com/qu46cs
----
+[👉 Demo video] (https://drive.google.com/file/d/1iw6J90HnnQpGPSQFO2lG9HW7EaPm5iJb/view?usp=drive_link)
 
+---
 ## 📦 Download APK
-
-[👉 Download APK](https://yourlink.com/stoppy-latest.apk)
-
-> _Upload the APK under `/releases` or link to a cloud drive / GitHub release._
+[👉 Download APK](https://drive.google.com/file/d/1CKc9zbtE8lXifjosV8-7x0zO6gGbIqOu/view?usp=drive_link)
 
 ---
-
 ## 🚀 Tech Stack
 
 - Kotlin
@@ -48,7 +47,6 @@ https://streamable.com/qu46cs
 - SharedPreferences
 - ConstraintLayout & CoordinatorLayout
 - Custom drawables and styles
-- Material Design 3
 
 ---
 

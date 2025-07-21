@@ -24,7 +24,7 @@
 
 | Timer Started | Lap List | Background Color Picker |
 |---------------|----------|--------------------------|
-| ![Timer](app/screenshots/timer_start.png) | ![Lap List](app/screenshots/lap_list.png) | ![Background Color](app/screenshots/font_color_option.png) |
+| ![Timer](app/screenshots/timer_start.png) | ![Lap List](app/screenshots/lap_list.png) | ![Background Color](app/screenshots/font_color_options.png) |
 
 | Theme Picker | Font Style Picker | Button Style Picker |
 |-------------------|-------------------|----------------------|

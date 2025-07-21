@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="home_viewmodel"
+            type="com.doublep.stoppy.home.viewmodel.HomeViewModel" />
+    </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_parentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/space_size_15">
+
+                        <ProgressBar
+                            android:id="@+id/progress_ring"
+                            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                            android:layout_width="320dp"
+                            android:layout_height="250dp"
+                            android:indeterminate="false"
+                            android:layout_marginTop="@dimen/space_size_10"
+                            android:max="360"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/bck_ring_progress"
+                            android:rotation="-90"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_timer"
+                            android:layout_width="220dp"
+                            android:layout_height="220dp"
+                            android:background="@drawable/bck_timer_circle"
+                            android:backgroundTint="@color/user_black"
+                            android:gravity="center"
+                            android:padding="@dimen/space_size_5"
+                            android:text="@{home_viewmodel.timeFormatted}"
+                            android:textSize="@dimen/text_size_30"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/progress_ring"
+                            app:layout_constraintBottom_toBottomOf="@id/progress_ring"
+                            />
+
+                    <Button
+                        android:id="@+id/btn_start_stop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bck_round_btn"
+                        android:drawableStart="@drawable/ic_play"
+                        android:text="@string/btn_start"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/space_size_10"
+                        android:textColor="@color/user_black"
+                        android:padding="@dimen/space_size_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btn_lap_reset"
+                        app:layout_constraintTop_toBottomOf="@id/progress_ring"
+                        app:layout_constraintWidth_percent="0.4" />
+
+                    <Button
+                        android:id="@+id/btn_lap_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bck_round_btn"
+                        android:drawableStart="@drawable/ic_reset"
+                        android:text="@string/btn_reset"
+                        android:padding="@dimen/space_size_10"
+                        android:textColor="@color/user_black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/btn_start_stop"
+                        app:layout_constraintTop_toTopOf="@id/btn_start_stop"
+                        app:layout_constraintWidth_percent="0.4" />
+
+                    <View
+                        android:id="@+id/vw_divider"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/space_size_2"
+                        android:background="@color/user_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.9"
+                        app:layout_constraintTop_toBottomOf="@id/btn_lap_reset"
+                        android:layout_marginVertical="@dimen/space_size_10"
+                        />
+
+                    <TextView
+                        android:id="@+id/lbl_timeLaps"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_lapTitle"
+                        android:textSize="@dimen/text_size_20"
+                        android:visibility="gone"
+                        android:padding="@dimen/space_size_5"
+                        android:layout_marginTop="@dimen/space_size_15"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/vw_divider" />
+
+                    <TextView
+                        android:id="@+id/lbl_lapsSection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_lapSection"
+                        android:textSize="@dimen/text_size_15"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@id/lbl_timeLaps"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recy_laps"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/space_size_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lbl_timeLaps" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_size_10"
+                android:contentDescription="@string/cd_fab_setting"
+                android:src="@drawable/ic_settings"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/fab_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/space_size_20"
+                app:layout_constraintStart_toStartOf="@id/fab_main"
+                app:layout_constraintEnd_toEndOf="@id/fab_main"
+                app:layout_constraintBottom_toTopOf="@id/fab_main"
+                >
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="@dimen/space_size_45"
+                    android:contentDescription="@string/cd_fab_theme"
+                    android:src="@drawable/ic_theme"
+                    android:layout_margin="@dimen/space_size_5"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="@dimen/space_size_45"
+                    android:contentDescription="@string/cd_fab_font"
+                    android:layout_margin="@dimen/space_size_5"
+                    android:src="@drawable/ic_font" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_font_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="@dimen/space_size_45"
+                    android:contentDescription="@string/cd_fab_font_color"
+                    android:layout_margin="@dimen/space_size_5"
+                    android:src="@drawable/ic_font_color" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="@dimen/space_size_45"
+                    android:contentDescription="@string/cd_fab_bck_color"
+                    android:layout_margin="@dimen/space_size_5"
+                    android:src="@drawable/ic_back_color" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_button_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="@dimen/space_size_45"
+                    android:layout_margin="@dimen/space_size_5"
+                    android:contentDescription="@string/cd_fab_button_style"
+                    android:src="@drawable/ic_button" />
+            </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

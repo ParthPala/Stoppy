@@ -1,0 +1,62 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace 'com.doublep.stoppy'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.doublep.stoppy"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    // ViewModel and LiveData
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.lifecycle.livedata.ktx
+
+// RecyclerView
+    implementation libs.androidx.recyclerview
+
+// Kotlin Coroutines
+    implementation libs.kotlinx.coroutines.core
+    implementation libs.kotlinx.coroutines.android
+
+// ViewModel utilities
+    implementation libs.androidx.lifecycle.runtime.ktx
+
+    implementation libs.androidx.cardview
+}

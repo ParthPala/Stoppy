@@ -20,15 +20,15 @@
 
 | Splash | Home | Settings |
 |--------|------|----------|
-| ![Splash](screenshots/splash.png) | ![Home](screenshots/home.png) | ![Settings](screenshots/fab_button.png) |
+| ![Splash](app/screenshots/splash.png) | ![Home](app/screenshots/home.png) | ![Settings](app/screenshots/fab_button.png) |
 
 | Timer Started | Lap List | Background Color Picker |
 |---------------|----------|--------------------------|
-| ![Timer](screenshots/timer_start.png) | ![Lap List](screenshots/lap_list.png) | ![Background Color](screenshots/font_color_option.png) |
+| ![Timer](app/screenshots/timer_start.png) | ![Lap List](app/screenshots/lap_list.png) | ![Background Color](app/screenshots/font_color_option.png) |
 
 | Theme Picker | Font Style Picker | Button Style Picker |
 |-------------------|-------------------|----------------------|
-| ![Font Color](screenshots/theme_options.png) | ![Font Style](screenshots/font_options.png) | ![Button Style](screenshots/button_style_options.png) |
+| ![Font Color](app/screenshots/theme_options.png) | ![Font Style](app/screenshots/font_options.png) | ![Button Style](app/screenshots/button_style_options.png) |
 
 ---
 ## 📹 Demo Video
@@ -36,7 +36,7 @@
 
 ---
 ## 📦 Download APK
-[👉 Download APK](https://drive.google.com/file/d/1CKc9zbtE8lXifjosV8-7x0zO6gGbIqOu/view?usp=drive_link)
+[👉 Download APK] (https://drive.google.com/file/d/1CKc9zbtE8lXifjosV8-7x0zO6gGbIqOu/view?usp=drive_link)
 
 ---
 ## 🚀 Tech Stack

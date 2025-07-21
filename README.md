@@ -29,11 +29,7 @@
 ---
 
 ## 📹 Demo Video
-
-https://user-images.githubusercontent.com/yourvideoID/sample-demo.mp4
-
-> _Upload a demo `.mp4` file under `/demo` or add a YouTube link._
-
+https://streamable.com/qu46cs
 ---
 
 ## 📦 Download APK

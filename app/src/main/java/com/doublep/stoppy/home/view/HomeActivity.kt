@@ -25,8 +25,9 @@ import com.doublep.stoppy.home.others.ButtonStyleAdapter
 import com.doublep.stoppy.home.others.LapAdapter
 import com.doublep.stoppy.home.viewmodel.HomeViewModel
 
-
+// Main activity handling the stopwatch UI and all interactions with ViewModel and user preferences
 class HomeActivity : AppCompatActivity() {
+
     private lateinit var binding: AcHomePageBinding
     private lateinit var viewModel: HomeViewModel
     private lateinit var lapAdapter: LapAdapter
@@ -114,6 +115,7 @@ class HomeActivity : AppCompatActivity() {
         binding.recyLaps.adapter = lapAdapter
         binding.recyLaps.layoutManager = LinearLayoutManager(this)
 
+        // Load saved timer and laps from SharedPreferences
         val (savedTime, savedLaps) = PrefsHelper.loadState(this)
         viewModel.lapList.addAll(savedLaps)
         viewModel.setTimerTime(savedTime)
@@ -124,7 +126,7 @@ class HomeActivity : AppCompatActivity() {
             binding.lblTimeLaps.visibility = View.VISIBLE
         }
 
-
+        // Apply previously saved customizations (color, font, button style)
         val (digitColor, bgColor) = PrefsHelper.loadColors(this)
         val fontIndex = PrefsHelper.loadFontName(this) ?: 0
         val btnStyleIndex = PrefsHelper.loadButtonStyleIndex(this)
@@ -135,6 +137,7 @@ class HomeActivity : AppCompatActivity() {
 
         applyButtonStyle(btnStyleIndex)
 
+        // Button click actions for start/stop and lap/reset
         binding.btnStartStop.setOnClickListener {
             changeStartStopBtnUIAndPerformClick()
         }
@@ -143,12 +146,13 @@ class HomeActivity : AppCompatActivity() {
             changeLapResetBtnUIAndPerformClick()
         }
 
-
+            // FAB Menu toggle logic
         binding.fabMain.setOnClickListener {
             binding.fabMenu.visibility =
                 if (binding.fabMenu.isVisible) View.GONE else View.VISIBLE
         }
 
+        // FAB Menu actions (theme, font, color pickers)
         binding.fabTheme.setOnClickListener {
             showThemeChooser()
         }
@@ -203,6 +207,9 @@ class HomeActivity : AppCompatActivity() {
             .show()
     }
 
+    /**
+     * Applies the selected theme to the timer UI
+     */
 
     private fun applyTheme(theme: ThemePack) {
         binding.tvTimer.setTextColor(theme.fontColor)
@@ -213,6 +220,9 @@ class HomeActivity : AppCompatActivity() {
         PrefsHelper.saveFontName(this, theme.fontIndex)
     }
 
+    /**
+     * Changes button background based on style index
+     */
     private fun applyButtonStyle(index: Int) {
         val selectedStyle = buttonStyleItems[index]
         val drawable = ContextCompat.getDrawable(this, selectedStyle.styleDrawableId)
@@ -220,6 +230,9 @@ class HomeActivity : AppCompatActivity() {
         binding.btnLapReset.background = drawable
     }
 
+    /**
+     * Toggles between start/stop UI state and updates timer logic
+     */
     private fun changeStartStopBtnUIAndPerformClick() {
         if (binding.btnStartStop.text == resources.getString(R.string.btn_start)) {
             binding.btnStartStop.text = resources.getString(R.string.btn_stop)
@@ -256,6 +269,9 @@ class HomeActivity : AppCompatActivity() {
         triggerHapticFeedback()
     }
 
+    /**
+     * Handles logic for lap creation or full reset
+     */
     private fun changeLapResetBtnUIAndPerformClick() {
         if (binding.btnLapReset.text == resources.getString(R.string.btn_lap)) {
             binding.lblLapsSection.visibility = View.GONE
@@ -289,11 +305,16 @@ class HomeActivity : AppCompatActivity() {
         return ContextCompat.getColor(this, colorResId)
     }
 
-
+    /**
+     * Handles logic to start haptic feedback on button press
+     */
     private fun triggerHapticFeedback() {
         binding.root.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
     }
 
+    /**
+     * Handles logic for progress ring for infinite times
+     */
     private fun startProgressRing() {
         stopProgressRing()
         animateStart()
@@ -311,7 +332,9 @@ class HomeActivity : AppCompatActivity() {
         progressAnimator.start()
 
     }
-
+    /**
+     * Handles logic for animation of timer view when buttons are pressed
+     */
     private fun animateStart() {
         binding.tvTimer.animate()
             .scaleX(1.1f).scaleY(1.1f)
@@ -334,6 +357,7 @@ class HomeActivity : AppCompatActivity() {
                     .start()
             }.start()
     }
+
 
     private fun animateStop() {
         binding.tvTimer.animate()
@@ -390,6 +414,9 @@ class HomeActivity : AppCompatActivity() {
         binding.progressRing.progress = 0
     }
 
+    /**
+     * Opens custom color picker dialog with predefined palette
+     */
     private fun openColorPicker(onColorPicked: (Int) -> Unit) {
         val colors = arrayOf(
             "White",

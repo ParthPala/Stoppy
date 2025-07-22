@@ -15,31 +15,35 @@
 - Floating Action Button (FAB) menu for quick settings
 - Save and restore laps across sessions
 - Responsive layout tested on multiple device sizes
+---
+## 📱 App Screenshots
+
+| Splash | Home | Settings |
+|--------|------|----------|
+| ![Splash](app/screenshots/splash.png) | ![Home](app/screenshots/home.png) | ![Settings](app/screenshots/fab_button.png) |
+
+| Timer Started | Lap List | Background Color Picker |
+|---------------|----------|--------------------------|
+| ![Timer](app/screenshots/timer_start.png) | ![Lap List](app/screenshots/lap_list.png) | ![Background Color](app/screenshots/font_color_options.png) |
+
+| Theme Picker | Font Style Picker | Button Style Picker |
+|-------------------|-------------------|----------------------|
+| ![Font Color](app/screenshots/theme_options.png) | ![Font Style](app/screenshots/font_options.png) | ![Button Style](app/screenshots/button_style_options.png) |
 
 ---
-
-## 🖼️ Screenshots
-
-| Home Screen | Theme Selection | Button Styles | Lap View |
-|-------------|------------------|----------------|----------|
-| ![Home](screenshots/screen_home.jpg) | ![Themes](screenshots/screen_theme.jpg) | ![Buttons](screenshots/screen_buttons.jpg) | ![Laps](screenshots/screen_laps.jpg) |
-
-> _You can place your screenshots in a `/screenshots` folder_
-
----
-
 ## 📹 Demo Video
-https://streamable.com/qu46cs
----
+[👉 Demo video](https://drive.google.com/file/d/1iw6J90HnnQpGPSQFO2lG9HW7EaPm5iJb/view?usp=drive_link)
 
+---
 ## 📦 Download APK
-
-[👉 Download APK](https://yourlink.com/stoppy-latest.apk)
-
-> _Upload the APK under `/releases` or link to a cloud drive / GitHub release._
+[👉 Download APK](https://drive.google.com/file/d/1CKc9zbtE8lXifjosV8-7x0zO6gGbIqOu/view?usp=drive_link)
 
 ---
+## 📄 Code Detail Document
+[👉 Document](https://drive.google.com/file/d/16BScFhR_SlvHmg19Ijx-buq9pWvbPH00/view?usp=drive_link)
 
+
+---
 ## 🚀 Tech Stack
 
 - Kotlin
@@ -48,31 +52,5 @@ https://streamable.com/qu46cs
 - SharedPreferences
 - ConstraintLayout & CoordinatorLayout
 - Custom drawables and styles
-- Material Design 3
-
----
-
-## 📁 Folder Structure
-com.doublep.stoppy
-├── data/ # PrefsHelper, ThemePack, ButtonStyleItem
-├── home/
-│ ├── view/ # HomeActivity, layouts
-│ ├── viewmodel/ # HomeViewModel
-│ └── others/ # LapAdapter
-└── drawable/ # Button backgrounds, icons
----
-
-## 🛠️ Setup Instructions
-
-1. Clone this repository
-2. Open in Android Studio
-3. Run on emulator or device (min SDK 24)
-
----
-
-## 👤 Author
-
-Parth Pala  
-📧 palaparth28@gmail.com
 
 ---

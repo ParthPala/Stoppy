@@ -32,11 +32,16 @@
 
 ---
 ## 📹 Demo Video
-[👉 Demo video] (https://drive.google.com/file/d/1iw6J90HnnQpGPSQFO2lG9HW7EaPm5iJb/view?usp=drive_link)
+[👉 Demo video](https://drive.google.com/file/d/1iw6J90HnnQpGPSQFO2lG9HW7EaPm5iJb/view?usp=drive_link)
 
 ---
 ## 📦 Download APK
-[👉 Download APK] (https://drive.google.com/file/d/1CKc9zbtE8lXifjosV8-7x0zO6gGbIqOu/view?usp=drive_link)
+[👉 Download APK](https://drive.google.com/file/d/1CKc9zbtE8lXifjosV8-7x0zO6gGbIqOu/view?usp=drive_link)
+
+---
+## 📄 Code Detail Document
+[👉 Document](https://drive.google.com/file/d/16BScFhR_SlvHmg19Ijx-buq9pWvbPH00/view?usp=drive_link)
+
 
 ---
 ## 🚀 Tech Stack
